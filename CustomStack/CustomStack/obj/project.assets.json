@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\esto0\\source\\repos\\CustomStack\\CustomStack\\CustomStack.csproj",
+      "projectUniqueName": "C:\\Users\\esto0\\Documents\\myStack\\CustomStack\\CustomStack\\CustomStack.csproj",
       "projectName": "CustomStack",
-      "projectPath": "C:\\Users\\esto0\\source\\repos\\CustomStack\\CustomStack\\CustomStack.csproj",
+      "projectPath": "C:\\Users\\esto0\\Documents\\myStack\\CustomStack\\CustomStack\\CustomStack.csproj",
       "packagesPath": "C:\\Users\\esto0\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\esto0\\source\\repos\\CustomStack\\CustomStack\\obj\\",
+      "outputPath": "C:\\Users\\esto0\\Documents\\myStack\\CustomStack\\CustomStack\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\esto0\\AppData\\Roaming\\NuGet\\NuGet.Config",

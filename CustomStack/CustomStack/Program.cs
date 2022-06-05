@@ -27,6 +27,8 @@ public class Stack
 
     public string top;
 
+    public string result;
+
     
 
     public Stack(params string[] stocks)
@@ -53,11 +55,13 @@ public class Stack
         {
             throw new InvalidOperationException("Стек пустой");
         }
-        top = stock[Size - 1];
-        stock.Remove(top);
+        result = stock[Size - 1];
+        stock.Remove(result);
         Size = stock.Count;
-        
-        return top;
+        if (Size == 0)
+        { top = null; } 
+        else { top = stock[Size - 1]; };
+        return result;
        
 
     }
