@@ -20,7 +20,10 @@
 //s.Merge(new Stack("1", "2", "3"));
 //Console.WriteLine($"size = {s.Size}, Top = '{s.top}'");
 //Console.ReadKey();
-var s = Stack.Concat(new Stack("a", "b", "c"), new Stack("1", "2", "3"), new Stack("А", "Б", "В"));
+
+
+var s = Stack.Concat(new Stack("a", "b", "c"), new Stack("1", "2", "3"));
+Console.ReadKey();
 
 
 
@@ -43,7 +46,6 @@ static class StackExtension
 public class Stack
 {
     private List<string> stock = new List<string>();
-    private List<Stack> liststack = new List<Stack>();// относится к доп заданию 2
 
     public int Size { get; private set; }
 
@@ -51,17 +53,24 @@ public class Stack
 
     public string result;
 
-    public static Stack Concat(params Stack[] stacks)// относится к доп заданию 2. 
+    public static List<string> Concat(params Stack[] stacks)// относится к доп заданию 2. 
     {
-        var stack = new Stack();
-        stack.liststack.AddRange(stacks);
-       
-
-        for (int i = 0; i < stack.liststack.Count; i++)
+ 
+        List<string> ListItem = new List<string>();
+        int Count = stacks.Length;
+        
+        string item;
+        for (int i = 0; i <Count; i++)
         {
-            
+           Stack stack = stacks[i];
+           int count = stack.Size;
+           for (int j = 0; j < count; j++)
+           {
+                item = stack.Pop();
+                ListItem.Add(item);
+           }
         }
-        return stack;
+        return ListItem;
     }
 
     public Stack(params string[] stocks)
