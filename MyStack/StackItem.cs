@@ -1,4 +1,6 @@
-﻿
+﻿namespace CastomStack
+{
+
 public class StackItem
 {
     private string[]? _items;
@@ -41,4 +43,5 @@ public class StackItem
         return _items[Count - 1];
     }
 
+}
 }

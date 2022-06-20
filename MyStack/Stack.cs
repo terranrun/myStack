@@ -1,11 +1,12 @@
-﻿
+﻿using CastomStack;
+
 public class Stack
 {
     private StackItem stackItem = new StackItem();
 
     public int Size { get; private set; }
 
-    public string top;
+    public string Top;
 
     public string result;
 
@@ -34,14 +35,14 @@ public class Stack
     {
         stackItem.AddRange(stocks);
         Size = stackItem.Count;
-        top = stackItem.Peek();
+        Top = stackItem.Peek();
     }
 
     public void Add(string item)
     {
         stackItem.Add(item);
         Size = stackItem.Count;
-        top = stackItem.Peek();
+        Top = stackItem.Peek();
     }
 
     public string Pop()
@@ -55,11 +56,11 @@ public class Stack
         Size = stackItem.Count;
         if (Size == 0)
         {
-            top = null; 
+            Top = null; 
         }
         else 
         { 
-            top = stackItem.Peek(); 
+            Top = stackItem.Peek(); 
         }
         return result;
     }
